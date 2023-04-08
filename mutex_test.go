@@ -99,6 +99,14 @@ func init() {
 	}
 }
 
+func TestSmoke(t *testing.T) {
+	mu := contest.New()
+	mu.Lock()
+	fmt.Println("Lock")
+	mu.Unlock()
+	fmt.Println("Unlock")
+}
+
 func TestMutexDeadlock(t *testing.T) {
 	mu := contest.New()
 	stop := make(chan bool)

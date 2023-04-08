@@ -9,3 +9,7 @@ type Mutex interface {
 
 	Unlock()
 }
+
+type MyMutex struct {
+	ch chan struct{}
+}
